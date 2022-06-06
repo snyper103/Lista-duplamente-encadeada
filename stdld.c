@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <time.h>
 #define SWAP(a,b)({a^=b;b^=a;a^=b;})
 #define descobreSize(arr,n)({n=sizeof(arr)/sizeof(arr[0]);})
 
@@ -16,7 +17,7 @@ struct noDiscritor
     unsigned long qtd;
 };
 
-/**FunÁıes proprias da .c*/
+/**Fun√ß√µes proprias da .c*/
 void fazTroca( struct informacao* dado1, struct informacao* dado2 )
 {
     info temp = *dado1;
@@ -82,7 +83,7 @@ short heapify( struct elementos* pInicio, unsigned long tam, unsigned long pos )
     return 1;
 }
 
-/**FunÁıes que est„o na .h*/
+/**Fun√ß√µes que est√£o na .h*/
 short criaLista( lista** li )
 {
     *li = (lista*)malloc(sizeof(lista));
@@ -396,10 +397,10 @@ short imprimeConteudo(lista* li)
     if(listaVazia(li))
         return 0;
 
-    printf("\n\t##### ...ComeÁando a imprimir... #####\n");
+    printf("\n\t##### ...Come√ßando a imprimir... #####\n");
     for(no = li->pInicio, i = 1; no != NULL; no = no->prox, ++i)
-        printf("%lu∫ numero: %lu\n", i, no->dados.num);
-    printf("\n\t##### ...Termino da impreÁ„o... #####\n");
+        printf("%lu¬∫ numero: %lu\n", i, no->dados.num);
+    printf("\n\t##### ...Termino da impre√ß√£o... #####\n");
 
     return 1;
 }
